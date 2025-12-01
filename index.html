@@ -1,1 +1,137 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek Jha | Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --bg: #0a0a0a; --bg-sec: #1a1a1a; --accent: #00d4ff; --text: #ffffff; --text-sec: #b0b0b0; }
+        [data-theme="light"] { --bg: #f8f9fa; --bg-sec: #e9ecef; --accent: #007bff; --text: #212529; --text-sec: #6c757d; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); scroll-behavior: smooth; }
+        header { position: fixed; top: 0; width: 100%; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1rem 0; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        nav h1 { font-size: 1.5rem; font-weight: 700; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: var(--text); text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        #theme-toggle { background: none; border: none; color: var(--text); font-size: 1.2rem; cursor: pointer; }
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        #hero { text-align: center; padding-top: 8rem; background: linear-gradient(135deg, var(--bg-sec) 0%, var(--bg) 100%); }
+        #hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, var(--accent), #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        #hero p { font-size: 1.3rem; color: var(--text-sec); max-width: 600px; margin: 0 auto 2rem; }
+        .btn { display: inline-block; padding: 1rem 2rem; background: var(--accent); color: var(--bg); text-decoration: none; border-radius: 50px; font-weight: 500; transition: transform 0.3s, box-shadow 0.3s; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,212,255,0.4); }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 3rem; }
+        .skill { background: var(--bg-sec); padding: 1.5rem; border-radius: 12px; text-align: center; transition: transform 0.3s; }
+        .skill:hover { transform: translateY(-5px); }
+        .skill i { font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem; }
+        .exp-item, .proj-item { background: var(--bg-sec); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; }
+        .exp-item h3, .proj-item h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--accent); }
+        .exp-item .date { color: var(--text-sec); margin-bottom: 1rem; }
+        ul { margin-left: 1.5rem; color: var(--text-sec); }
+        #contact { text-align: center; background: var(--bg-sec); }
+        #contact a { color: var(--accent); font-size: 1.2rem; margin: 0 1rem; }
+        @media (max-width: 768px) { nav ul { display: none; } #hero h1 { font-size: 2.5rem; } }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s, transform 0.6s; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><i class="fas fa-database"></i> Prateek Jha</h1>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section id="hero" class="fade-in">
+        <h1>Prateek Jha</h1>
+        <p>Results-driven Data Engineer with 7+ years building 250+ scalable pipelines for Fortune 500s. Expert in Azure, Snowflake, PySpark driving MLOps, real-time analytics for product/fintech impact.</p>
+        <a href="#contact" class="btn">Connect Now</a>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <p>7 years engineering robust ETL/ELT, zero-touch automation, and AI POCs (Llama-2 for 30% data quality boost). Passionate about fintech/product data platforms enabling ML and decisions. B.Tech CSE (8.01 GPA). New Delhi-based, open to global roles. [file:1][file:2]</p>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill"><i class="fas fa-cloud"></i><h3>Cloud</h3><p>Azure Data Factory, Databricks, ADLS Gen2, KeyVaults</p></div>
+            <div class="skill"><i class="fas fa-database"></i><h3>Databases</h3><p>Snowflake, SQL Server, MySQL</p></div>
+            <div class="skill"><i class="fas fa-code"></i><h3>Programming</h3><p>Python, PySpark, SQL, Airflow, Shell</p></div>
+            <div class="skill"><i class="fas fa-chart-bar"></i><h3>Visualization</h3><p>Power BI, Tableau</p></div>
+        </div> [file:1]
+    </section>
+
+    <section id="experience" class="fade-in">
+        <h2>Experience</h2>
+        <div class="exp-item">
+            <h3>Data Engineer, UnitedHealth Group (Jan 2023 - Present)</h3>
+            <div class="date">New Delhi</div>
+            <ul>
+                <li>Engineered ETL pipelines with Snowflake/PySpark/ADF for 50 US orgs, 100% integrity via CI/CD.</li>
+                <li>Llama-2 POC auto-cleaned data (+30% quality, -25% prep time).</li>
+                <li>Python automation saved 2hrs/day; Snowflake Tableau dashboard.</li>
+            </ul>
+        </div>
+        <div class="exp-item">
+            <h3>BI Developer, Hemmersbach (Sep 2021 - Dec 2022)</h3>
+            <div class="date">Bangalore</div>
+            <ul>
+                <li>Power BI star schemas, SSIS ETL (99% accuracy).</li>
+                <li>APAC BI rollout for 15 teams.</li>
+            </ul>
+        </div> [file:1][file:2]
+    </section>
+
+    <section id="projects" class="fade-in">
+        <h2>Achievements & Projects</h2>
+        <div class="exp-item">
+            <h3>BRAVO! Awards (x2)</h3>
+            <ul>
+                <li>Data standardization for unified warehouse.</li>
+                <li>Python zero-touch scheduling framework.</li>
+            </ul>
+        </div>
+        <div class="exp-item">
+            <h3>Key Projects</h3>
+            <ul>
+                <li>150+ SSIS packages (15M rows/week).</li>
+                <li>50+ Power BI reports for KPIs.</li>
+            </ul>
+        </div> [file:1]
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Get in Touch</h2>
+        <p>91 7979010021 | jha09prateek@gmail.com | New Delhi, India</p>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin" style="font-size:2rem;"></i></a>
+        <a href="https://github.com/yourgithub" target="_blank"><i class="fab fa-github" style="font-size:2rem;"></i></a>
+        <p>Download <a href="Prateek_Jha_Data_Engineer_2025.pdf" download>Resume</a> | <a href="Prateek_Jha_Data_Engineer_2025_Cover_Letter.pdf" download>Cover Letter</a></p>
+    </section>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+            toggle.querySelector('i').className = document.body.dataset.theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        });
+        document.body.dataset.theme = 'dark'; // Default
+        const observer = new IntersectionObserver(entries => entries.forEach(e => e.target.classList.toggle('visible', e.isIntersecting)));
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
